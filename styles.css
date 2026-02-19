@@ -278,26 +278,92 @@ box-shadow:0 0 20px rgba(0,0,0,0.5);
 
 /* ITINERARIO */
 
-.itinerario-lista{
+/* TIMELINE */
 
-list-style:none;
+.timeline{
 
-padding:0;
+position:relative;
 
-line-height:2;
+margin-top:30px;
+
+padding-left:30px;
+
+}
+
+
+/* LINEA */
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:10px;
+
+top:0;
+
+bottom:0;
+
+width:2px;
+
+background:#f7d774;
+
+}
+
+
+/* EVENTO */
+
+.evento{
+
+position:relative;
+
+margin-bottom:25px;
 
 font-size:18px;
 
+text-align:left;
+
+padding-left:15px;
+
 }
 
 
+/* PUNTO */
 
-.itinerario-lista i{
+.evento::before{
+
+content:"";
+
+position:absolute;
+
+left:-21px;
+
+top:6px;
+
+width:12px;
+
+height:12px;
+
+background:#f7d774;
+
+border-radius:50%;
+
+box-shadow:0 0 10px #f7d774;
+
+}
+
+
+/* ICONO */
+
+.evento i{
 
 color:#f7d774;
-margin-right:8px;
+
+margin-right:10px;
 
 }
+
 
 
 
@@ -383,7 +449,7 @@ margin-bottom:10px;
 
 position:fixed;
 
-bottom:20px;
+bottom:35px;
 right:20px;
 
 z-index:999;
