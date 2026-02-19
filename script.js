@@ -77,3 +77,23 @@ const url = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=XV
 window.open(url);
 
 }
+
+
+
+window.addEventListener("scroll", function(){
+
+document.querySelectorAll(".card").forEach(function(card){
+
+let position = card.getBoundingClientRect().top;
+
+let screen = window.innerHeight;
+
+if(position < screen - 100){
+
+card.classList.add("visible");
+
+}
+
+});
+
+});
