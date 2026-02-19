@@ -1,14 +1,13 @@
 body{
 
 margin:0;
-
-font-family: 'Montserrat', sans-serif;
-
+font-family:'Poppins', sans-serif;
 color:white;
-
 text-align:center;
+background:black;
 
 }
+
 
 
 /* PORTADA */
@@ -18,15 +17,11 @@ text-align:center;
 height:100vh;
 
 background:url("foto1.jpg");
-
 background-size:cover;
-
 background-position:center;
 
 display:flex;
-
 justify-content:center;
-
 align-items:center;
 
 position:relative;
@@ -34,45 +29,78 @@ position:relative;
 }
 
 
+
 .overlay{
 
 position:absolute;
-
 width:100%;
-
 height:100%;
-
 background:rgba(0,0,0,0.45);
 
 }
 
 
+
 .contenido{
 
 position:relative;
+padding:20px;
 
-animation: aparecer 2s;
+}
+
+
+
+/* TITULO MIS XV */
+
+h1{
+
+font-family:'Great Vibes', cursive;
+font-size:70px;
+font-weight:normal;
+margin:10px 0;
 
 }
 
 
-@keyframes aparecer{
 
-from{
+/* NOMBRE */
 
-opacity:0;
+.portada h2{
 
-transform:translateY(40px);
+font-family:'Great Vibes', cursive;
+font-size:55px;
+font-weight:normal;
+
+color:#f7d774;
+
+margin-bottom:20px;
+
+}
+
+
+
+/* TITULOS SECCIONES */
+
+.card h2{
+
+font-family:'Great Vibes', cursive;
+font-size:42px;
+font-weight:normal;
+
+margin-bottom:20px;
+
+color:#f7d774;
 
 }
 
-to{
 
-opacity:1;
 
-transform:translateY(0);
+/* TEXTO */
 
-}
+p{
+
+font-size:18px;
+line-height:1.6;
 
 }
 
@@ -82,13 +110,13 @@ transform:translateY(0);
 
 .foto-central{
 
-width:250px;
+width:260px;
 
 border-radius:20px;
 
 animation:flotar 4s infinite;
 
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
+box-shadow:0 0 25px rgba(212,175,55,0.6);
 
 }
 
@@ -104,72 +132,89 @@ transform:translateY(-15px);
 
 }
 
+/* TEXTO FAMILIA */
 
+.familia{
 
-/* LETRAS PREMIUM */
-
-
-/* TITULO */
-
-h1{
-
-font-family: 'Great Vibes', cursive;
-
-font-size:70px;
-
-color:#f7d774;
-
-margin:10px 0;
-
-text-shadow:0 0 15px rgba(0,0,0,0.6);
+font-family:'Poppins', sans-serif;
 
 }
 
 
+/* MIS PADRES / PADRINOS */
 
-/* NOMBRE */
-
-h2{
-
-font-family: 'Playfair Display', serif;
-
-font-size:35px;
-
-color:#ffffff;
-
-margin-bottom:20px;
-
-letter-spacing:2px;
-
-}
-
-
-
-/* TEXTO */
-
-p{
-
-font-family: 'Montserrat', sans-serif;
-
-font-size:18px;
-
-line-height:1.6;
-
-}
-
-
-
-/* MENSAJE ESPECIAL */
-
-.mensaje{
-
-font-family: 'Playfair Display', serif;
+.subtitulo{
 
 font-size:20px;
 
-font-style:italic;
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+opacity:0.8;
+
+}
+
+
+/* NOMBRES */
+
+.nombres{
+
+font-size:22px;
+
+font-weight:300;
+
+letter-spacing:1px;
+
+}
+
+
+/* CONTADOR */
+
+.countdown{
+
+display:flex;
+justify-content:center;
+gap:15px;
+
+margin-top:20px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.countdown div{
+
+background:rgba(0,0,0,0.6);
+
+padding:12px 15px;
+
+border-radius:15px;
+
+min-width:70px;
+
+}
+
+
+
+.countdown span{
+
+font-size:28px;
 
 color:#f7d774;
+
+font-weight:bold;
+
+}
+
+
+
+.countdown p{
+
+font-size:14px;
+margin:5px 0 0 0;
 
 }
 
@@ -179,32 +224,34 @@ color:#f7d774;
 
 .seccion{
 
-padding:100px 20px;
+padding:90px 20px;
 
 background-size:cover;
-
 background-position:center;
 
 }
 
 
+
 .foto2{
 
-background-image:url("foto2.jpg");
+background:url("foto2.jpg");
 
 }
+
 
 
 .foto3{
 
-background-image:url("foto3.jpg");
+background:url("foto3.jpg");
 
 }
 
 
+
 .foto4{
 
-background-image:url("foto4.jpg");
+background:url("foto4.jpg");
 
 }
 
@@ -214,19 +261,76 @@ background-image:url("foto4.jpg");
 
 .card{
 
-background:rgba(0,0,0,0.65);
+background:rgba(0,0,0,0.6);
 
-padding:35px;
+padding:30px;
 
 border-radius:20px;
 
-max-width:400px;
+max-width:420px;
 
 margin:auto;
 
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
+box-shadow:0 0 20px rgba(0,0,0,0.5);
 
-animation: aparecer 1.5s;
+}
+
+
+
+/* ITINERARIO */
+
+.itinerario-lista{
+
+list-style:none;
+
+padding:0;
+
+line-height:2;
+
+font-size:18px;
+
+}
+
+
+
+.itinerario-lista i{
+
+color:#f7d774;
+margin-right:8px;
+
+}
+
+
+
+/* BOTONES */
+
+button{
+
+padding:15px 30px;
+
+border:none;
+
+border-radius:30px;
+
+background:linear-gradient(45deg,#d4af37,#f7d774);
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+margin-top:15px;
+
+transition:0.3s;
+
+}
+
+
+
+button:hover{
+
+transform:scale(1.08);
 
 }
 
@@ -240,118 +344,164 @@ width:100%;
 
 height:250px;
 
+border:none;
+
 border-radius:15px;
 
-border:none;
+margin-top:15px;
 
 }
 
 
 
-/* BOTONES */
-
-button{
-
-padding:14px 30px;
-
-border:none;
-
-border-radius:30px;
-
-background: linear-gradient(45deg,#d4af37,#f7d774);
-
-color:white;
-
-font-size:18px;
-
-cursor:pointer;
-
-box-shadow:0 5px 20px rgba(0,0,0,0.4);
-
-transition:0.3s;
-
-}
-
-
-button:hover{
-
-transform:scale(1.1);
-
-}
-
-
-
-/* MUSICA */
+/* ICONO MUSICA */
 
 .music-icon{
 
-position: fixed;
+position:fixed;
 
-bottom: 20px;
+bottom:20px;
+right:20px;
 
-right: 20px;
+width:60px;
+height:60px;
 
-width: 65px;
+background:white;
 
-height: 65px;
+border-radius:50%;
 
-border-radius: 50%;
+display:flex;
 
-background: white;
+justify-content:center;
+align-items:center;
 
-display: flex;
+cursor:pointer;
 
-justify-content: center;
+box-shadow:0 0 15px rgba(0,0,0,0.4);
 
-align-items: center;
-
-box-shadow: 0 5px 25px rgba(0,0,0,0.5);
-
-cursor: pointer;
-
-z-index: 999;
+z-index:999;
 
 }
+
 
 
 .music-icon img{
 
-width: 35px;
+width:35px;
 
 }
 
+
+
+/* ROTAR ICONO */
 
 .rotating{
 
-animation: rotate 4s linear infinite;
+animation:rotate 4s linear infinite;
 
 }
+
 
 
 @keyframes rotate{
 
-from{
-
-transform: rotate(0deg);
-
-}
-
-to{
-
-transform: rotate(360deg);
-
-}
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
 
 }
 
 
 
-/* CONFIRMAR */
+/* FOOTER */
 
-.confirmar button{
+.footer{
 
-font-size:20px;
+background:black;
 
-padding:18px 35px;
+padding:15px;
+
+font-size:12px;
+
+color:white;
+
+}
+
+
+
+.footer span{
+
+font-size:12px;
+
+opacity:0.8;
+
+}
+
+
+
+.footer a{
+
+font-size:11px;
+
+color:#25D366;
+
+text-decoration:none;
+
+font-weight:normal;
+
+margin-left:8px;
+
+}
+
+
+
+.footer i{
+
+font-size:11px;
+
+}
+
+
+
+/* RESPONSIVE CELULAR */
+
+@media (max-width:600px){
+
+h1{
+
+font-size:50px;
+
+}
+
+.portada h2{
+
+font-size:40px;
+
+}
+
+.card h2{
+
+font-size:34px;
+
+}
+
+.foto-central{
+
+width:200px;
+
+}
+
+button{
+
+font-size:16px;
+
+padding:12px 20px;
+
+}
+
+.countdown span{
+
+font-size:22px;
+
+}
 
 }

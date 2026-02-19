@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mis XV Flor Borbor</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@300;400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<title>Mis XV Flor María Borbor Yagual</title>
 
 <link rel="stylesheet" href="styles.css">
 
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
+
 
 <body>
 
 
-<!-- MUSICA LOGO -->
 
 <!-- ICONO MUSICA -->
 
 <div class="music-icon" onclick="toggleMusic()">
+
 <img src="music.png" id="iconMusic">
+
 </div>
 
 
 <audio id="music">
 <source src="musica.mp3">
 </audio>
+
+
 
 
 
@@ -42,9 +51,7 @@
 
 <h1>Mis XV Años</h1>
 
-<h2>Flor Borbor Yagual</h2>
-
-<p id="countdown"></p>
+<h2>Flor María Borbor Yagual</h2>
 
 </div>
 
@@ -52,41 +59,48 @@
 
 
 
-<!-- PADRES + MENSAJE -->
+
+
+
+<!-- PADRES -->
 
 <section class="seccion foto2">
 
 <div class="card">
 
-<h2>Con la bendición de Dios</h2>
+<h2>
+<i class="fa-solid fa-church"></i>
+Con la bendición de Dios
+</h2>
 
-<p>
+<p class="familia">
 
-Mis Padres<br><br>
+<span class="subtitulo">Mis Padres</span><br><br>
 
+<span class="nombres">
 Guílbert Borbor Rodriguez<br>
-Flor Yagual Gonzales<br><br>
+Flor Yagual Gonzales
+</span>
 
-Mis Padrinos<br><br>
 
+<br><br>
+
+<span class="subtitulo">Mis Padrinos</span><br><br>
+
+<span class="nombres">
 Jonathan Borbor Yagual<br>
 Michelle Pozo Magallán
+</span>
 
 </p>
 
-<br>
 
-<p class="mensaje">
+<p>
 
 Hoy dejo atrás mi niñez  
 y comienzo una nueva etapa  
 
-Me encantaría que seas parte  
-de este momento tan especial  
-
-Con cariño  
-
-Flor  
+y me encantaría compartirla contigo.
 
 </p>
 
@@ -96,13 +110,82 @@ Flor
 
 
 
-<!-- EVENTO -->
+
+
+<!-- FECHA Y CONTADOR -->
 
 <section class="seccion foto3">
 
 <div class="card">
 
-<h2>Recepción</h2>
+<h2>
+<i class="fa-solid fa-calendar"></i>
+Fecha del Evento
+</h2>
+
+<p>
+
+14 Marzo 2026<br>
+21h00
+
+</p>
+
+
+<div class="countdown">
+
+<div>
+<span id="dias"></span>
+<p>Días</p>
+</div>
+
+<div>
+<span id="horas"></span>
+<p>Horas</p>
+</div>
+
+<div>
+<span id="minutos"></span>
+<p>Min</p>
+</div>
+
+<div>
+<span id="segundos"></span>
+<p>Seg</p>
+</div>
+
+</div>
+
+
+<button onclick="guardarFecha()">
+
+<i class="fa-solid fa-calendar-plus"></i>
+
+Guardar Fecha
+
+</button>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- UBICACION -->
+
+<section class="seccion foto4">
+
+<div class="card">
+
+<h2>
+
+<i class="fa-solid fa-location-dot"></i>
+
+Recepción
+
+</h2>
 
 <p>
 
@@ -111,19 +194,24 @@ Santa Elena
 
 </p>
 
+
 <iframe
-
 src="https://www.google.com/maps?q=Sala+de+Eventos+Julipos+Santa+Elena+Ecuador&output=embed">
-
 </iframe>
 
-<br>
 
 <a href="https://maps.app.goo.gl/idcBdk6bZgK2fUxN7" target="_blank">
 
-<button>Cómo llegar</button>
+<button>
+
+<i class="fa-solid fa-map"></i>
+
+Cómo llegar
+
+</button>
 
 </a>
+
 
 </div>
 
@@ -132,22 +220,58 @@ src="https://www.google.com/maps?q=Sala+de+Eventos+Julipos+Santa+Elena+Ecuador&o
 
 
 
-<!-- ITINERARIO -->
 
-<section class="seccion foto4">
+<!-- ITINERARIO RESTAURADO -->
+
+<section class="seccion foto2">
 
 <div class="card">
 
-<h2>Itinerario</h2>
+<h2>
 
-<ul>
+<i class="fa-solid fa-calendar-check"></i>
 
-<li>Recepción</li>
-<li>Coctel</li>
-<li>Brindis</li>
-<li>Vals</li>
-<li>Cena</li>
-<li>Fiesta</li>
+Itinerario
+
+</h2>
+
+
+<ul class="itinerario-lista">
+
+<li>
+<i class="fa-solid fa-door-open"></i>
+Recepción
+</li>
+
+<li>
+<i class="fa-solid fa-champagne-glasses"></i>
+Cóctel
+</li>
+
+<li>
+<i class="fa-solid fa-wine-glass"></i>
+Brindis
+</li>
+
+<li>
+<i class="fa-solid fa-person-dress"></i>
+Vals
+</li>
+
+<li>
+<i class="fa-solid fa-camera"></i>
+Fotos
+</li>
+
+<li>
+<i class="fa-solid fa-utensils"></i>
+Cena
+</li>
+
+<li>
+<i class="fa-solid fa-music"></i>
+Fiesta
+</li>
 
 </ul>
 
@@ -158,21 +282,29 @@ src="https://www.google.com/maps?q=Sala+de+Eventos+Julipos+Santa+Elena+Ecuador&o
 
 
 
-<!-- SOBRE -->
 
-<section class="seccion foto2">
+
+<!-- SOBRE RESTAURADO -->
+
+<section class="seccion foto3">
 
 <div class="card">
 
-<h2>Lluvia de Sobres</h2>
+<h2>
+
+<i class="fa-solid fa-envelope"></i>
+
+Lluvia de Sobres
+
+</h2>
 
 <p>
 
-Tu presencia es mi mejor regalo  
+Tu presencia es el mejor regalo  
 
 pero si deseas obsequiarme algo  
 
-agradeceré que sea en sobre cerrado  
+agradeceré que sea en sobre cerrado.
 
 </p>
 
@@ -182,17 +314,42 @@ agradeceré que sea en sobre cerrado
 
 
 
-<!-- ALBUM -->
 
-<section class="seccion foto3">
+
+
+<!-- ALBUM RESTAURADO -->
+
+<section class="seccion foto4">
 
 <div class="card">
 
-<h2>Álbum</h2>
+<h2>
+
+<i class="fa-solid fa-camera"></i>
+
+Comparte tus momentos
+
+</h2>
+
+
+<p>
+
+Comparte las fotos que capturaste  
+
+durante esta noche especial
+
+</p>
+
 
 <a href="https://drive.google.com/drive/folders/12BwmQEf0VgG4sgOcQNiasPt4ibR0XD9h">
 
-<button>Compartir Fotos</button>
+<button>
+
+<i class="fa-solid fa-images"></i>
+
+Ver Álbum
+
+</button>
 
 </a>
 
@@ -201,26 +358,43 @@ agradeceré que sea en sobre cerrado
 </section>
 
 
+
+
+
+
+
 <!-- CONFIRMAR -->
 
-<section class="confirmar">
+<section class="seccion foto2">
 
 <div class="card">
 
-<h2>Confirmar asistencia</h2>
+<h2>
+
+<i class="fa-solid fa-check"></i>
+
+Confirmar asistencia
+
+</h2>
+
 
 <p>
 
-Será un honor contar con tu presencia.  
-Por favor confirma tu asistencia.
+Esperamos contar con tu presencia  
+
+en esta noche inolvidable.
 
 </p>
 
+
 <button onclick="confirmarAsistencia()">
 
-Confirmar por WhatsApp
+<i class="fa-brands fa-whatsapp"></i>
+
+Confirmar asistencia
 
 </button>
+
 
 </div>
 
@@ -228,7 +402,36 @@ Confirmar por WhatsApp
 
 
 
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<span>
+
+Diseño realizado por JBODesign 2026
+
+</span>
+
+
+<a href="https://wa.me/593969143495">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+0969143495
+
+</a>
+
+</footer>
+
+
+
+
+
 <script src="script.js"></script>
 
+
 </body>
+
 </html>

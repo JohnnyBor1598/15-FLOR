@@ -1,58 +1,79 @@
-var music = document.getElementById("music");
+const music = document.getElementById("music");
+const icon = document.getElementById("iconMusic");
 
-var icon = document.getElementById("iconMusic");
-
+let isPlaying = false;
 
 function toggleMusic(){
 
-
-if(music.paused){
-
-music.play();
-
-icon.classList.add("rotating");
-
-}else{
+if(isPlaying){
 
 music.pause();
 
 icon.classList.remove("rotating");
 
+}else{
+
+music.play();
+
+icon.classList.add("rotating");
+
+}
+
+isPlaying = !isPlaying;
+
 }
 
 
-}
 
+//////////////////////////////////////////////////
+// CONTADOR REGRESIVO
+//////////////////////////////////////////////////
 
+const fechaEvento = new Date("Mar 14, 2026 21:00:00").getTime();
 
+const intervalo = setInterval(function(){
 
-/* COUNTDOWN */
+const ahora = new Date().getTime();
 
-let fecha = new Date("march 14, 2026 21:00:00");
+const diferencia = fechaEvento - ahora;
 
-setInterval(()=>{
+const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
 
-let hoy = new Date();
+const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
-let falta = fecha - hoy;
+const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
 
-let dias = Math.floor(falta / 1000 / 60 / 60 / 24);
+const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
-document.getElementById("countdown").innerHTML=
-
-"Faltan " + dias + " días";
+document.getElementById("dias").innerHTML = dias;
+document.getElementById("horas").innerHTML = horas;
+document.getElementById("minutos").innerHTML = minutos;
+document.getElementById("segundos").innerHTML = segundos;
 
 },1000);
 
 
+
+//////////////////////////////////////////////////
+// CONFIRMAR ASISTENCIA
+//////////////////////////////////////////////////
+
 function confirmarAsistencia(){
 
-var telefono = "593969143495"; // TU NUMERO
+window.open("https://wa.me/593961335980?text=Confirmo mi asistencia a los XV de Flor Maria Borbor Yagual");
 
-var mensaje = "Confirmo mi asistencia a los XV de Flor Borbor";
+}
 
-var url = "https://wa.me/" + telefono + "?text=" + encodeURIComponent(mensaje);
 
-window.open(url, "_blank");
+
+//////////////////////////////////////////////////
+// GUARDAR FECHA EN CALENDARIO
+//////////////////////////////////////////////////
+
+function guardarFecha(){
+
+const url = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=XV+Flor+Maria+Borbor+Yagual&dates=20260315T020000Z/20260315T050000Z&details=Te+esperamos&location=Sala+Julipos";
+
+window.open(url);
 
 }
