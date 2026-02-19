@@ -1,0 +1,357 @@
+body{
+
+margin:0;
+
+font-family: 'Montserrat', sans-serif;
+
+color:white;
+
+text-align:center;
+
+}
+
+
+/* PORTADA */
+
+.portada{
+
+height:100vh;
+
+background:url("foto1.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+}
+
+
+.overlay{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,0.45);
+
+}
+
+
+.contenido{
+
+position:relative;
+
+animation: aparecer 2s;
+
+}
+
+
+@keyframes aparecer{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+/* FOTO CENTRAL */
+
+.foto-central{
+
+width:250px;
+
+border-radius:20px;
+
+animation:flotar 4s infinite;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+
+}
+
+
+
+@keyframes flotar{
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+
+
+/* LETRAS PREMIUM */
+
+
+/* TITULO */
+
+h1{
+
+font-family: 'Great Vibes', cursive;
+
+font-size:70px;
+
+color:#f7d774;
+
+margin:10px 0;
+
+text-shadow:0 0 15px rgba(0,0,0,0.6);
+
+}
+
+
+
+/* NOMBRE */
+
+h2{
+
+font-family: 'Playfair Display', serif;
+
+font-size:35px;
+
+color:#ffffff;
+
+margin-bottom:20px;
+
+letter-spacing:2px;
+
+}
+
+
+
+/* TEXTO */
+
+p{
+
+font-family: 'Montserrat', sans-serif;
+
+font-size:18px;
+
+line-height:1.6;
+
+}
+
+
+
+/* MENSAJE ESPECIAL */
+
+.mensaje{
+
+font-family: 'Playfair Display', serif;
+
+font-size:20px;
+
+font-style:italic;
+
+color:#f7d774;
+
+}
+
+
+
+/* SECCIONES */
+
+.seccion{
+
+padding:100px 20px;
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+
+.foto2{
+
+background-image:url("foto2.jpg");
+
+}
+
+
+.foto3{
+
+background-image:url("foto3.jpg");
+
+}
+
+
+.foto4{
+
+background-image:url("foto4.jpg");
+
+}
+
+
+
+/* CARD */
+
+.card{
+
+background:rgba(0,0,0,0.65);
+
+padding:35px;
+
+border-radius:20px;
+
+max-width:400px;
+
+margin:auto;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+
+animation: aparecer 1.5s;
+
+}
+
+
+
+/* MAPA */
+
+iframe{
+
+width:100%;
+
+height:250px;
+
+border-radius:15px;
+
+border:none;
+
+}
+
+
+
+/* BOTONES */
+
+button{
+
+padding:14px 30px;
+
+border:none;
+
+border-radius:30px;
+
+background: linear-gradient(45deg,#d4af37,#f7d774);
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
+
+transition:0.3s;
+
+}
+
+
+button:hover{
+
+transform:scale(1.1);
+
+}
+
+
+
+/* MUSICA */
+
+.music-icon{
+
+position: fixed;
+
+bottom: 20px;
+
+right: 20px;
+
+width: 65px;
+
+height: 65px;
+
+border-radius: 50%;
+
+background: white;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+
+cursor: pointer;
+
+z-index: 999;
+
+}
+
+
+.music-icon img{
+
+width: 35px;
+
+}
+
+
+.rotating{
+
+animation: rotate 4s linear infinite;
+
+}
+
+
+@keyframes rotate{
+
+from{
+
+transform: rotate(0deg);
+
+}
+
+to{
+
+transform: rotate(360deg);
+
+}
+
+}
+
+
+
+/* CONFIRMAR */
+
+.confirmar button{
+
+font-size:20px;
+
+padding:18px 35px;
+
+}
