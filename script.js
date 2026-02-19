@@ -29,7 +29,7 @@ isPlaying = !isPlaying;
 // CONTADOR REGRESIVO
 //////////////////////////////////////////////////
 
-const fechaEvento = new Date("Mar 14, 2026 21:00:00").getTime();
+const fechaEvento = new Date("Mar 14, 2026 19:00:00").getTime();
 
 const intervalo = setInterval(function(){
 
