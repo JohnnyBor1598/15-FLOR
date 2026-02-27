@@ -235,7 +235,8 @@ background-position:center;
 .foto2{
 
 background:url("foto2.jpg");
-
+background-size: cover;
+background-position: center 10%;
 }
 
 
@@ -243,7 +244,8 @@ background:url("foto2.jpg");
 .foto3{
 
 background:url("foto3.jpg");
-
+background-size: cover;
+background-position: center 10%;
 }
 
 
@@ -254,6 +256,18 @@ background:url("foto4.jpg");
 
 }
 
+
+.foto5{
+
+background:url("foto5.jpg");
+background-size: cover;
+background-position: center 10%;
+}
+
+.foto6{
+
+background:url("foto6.jpg");
+}
 
 
 /* CARD */
@@ -622,20 +636,56 @@ font-size:22px;
 
 /* DISEÑO FLOTANTE */
 .card{
-
 opacity:0;
+transform:translateY(60px) scale(0.95);
+transition:all 1.2s ease;
+}
 
-transform:translateY(40px);
-
-transition:1s;
-
+.card.visible{
+opacity:1;
+transform:translateY(0) scale(1);
 }
 
 
-.card.visible{
+/* CONTENEDOR PETALOS */
+.petalos{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:99999;   /* MUY IMPORTANTE */
+}
 
-opacity:1;
+/* PETALO */
+.petalo{
+position:absolute;
+width:18px;
+height:24px;
+background:linear-gradient(145deg,#ffb6c1,#e89ab0);
+border-radius:60% 40% 60% 40%;
+transform:rotate(45deg);
+opacity:0.85;
+animation:caer linear infinite;
+filter:blur(0.3px);
+}
 
-transform:translateY(0);
-
+/* ANIMACION */
+@keyframes caer{
+0%{
+transform:translateY(-10vh) translateX(0px) rotate(0deg);
+}
+25%{
+transform:translateY(25vh) translateX(20px) rotate(90deg);
+}
+50%{
+transform:translateY(50vh) translateX(-20px) rotate(180deg);
+}
+75%{
+transform:translateY(75vh) translateX(15px) rotate(270deg);
+}
+100%{
+transform:translateY(110vh) translateX(-15px) rotate(360deg);
+}
 }

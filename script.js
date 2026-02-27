@@ -97,3 +97,27 @@ card.classList.add("visible");
 });
 
 });
+
+
+
+function crearPetalos(){
+const contenedor = document.querySelector('.petalos');
+
+for(let i=0; i<12; i++){
+
+let petalo = document.createElement('div');
+petalo.classList.add('petalo');
+
+petalo.style.left = Math.random() * 100 + "vw";
+petalo.style.top = Math.random() * -100 + "px";
+
+petalo.style.animationDuration = (6 + Math.random() * 6) + "s";
+petalo.style.animationDelay = Math.random() * 5 + "s";
+
+petalo.style.opacity = Math.random();
+
+contenedor.appendChild(petalo);
+}
+}
+
+document.addEventListener("DOMContentLoaded", crearPetalos);
